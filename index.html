@@ -403,6 +403,19 @@
         height: 100%;
         object-fit: cover;
       }
+
+      .contenedor-principal-negocio {
+        width: 320px;
+        height: 320px;
+        border-radius: 15px;
+        overflow: hidden; /* Esto es clave para que la imagen no "se salga" de las esquinas */
+      }
+
+      .contenedor-producto-negocio img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
 
@@ -413,7 +426,6 @@
         <div class="contenedor-img">
           <img src="image\logo.png" alt="Logo" width="400" height="400" />
         </div>
-
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
           <li><a href="#inicio">Inicio</a></li>
@@ -451,7 +463,11 @@
           regala.
         </p>
       </div>
-      <div class="about-image">📷 Espacio para imagen del negocio</div>
+      <div class="about-image">
+        <div class="contenedor-principal-negocio">
+          <img src="image\Puesto.jpeg" alt="Logo" width="600" height="600" />
+        </div>
+      </div>
     </section>
 
     <!-- Products Section -->
@@ -547,14 +563,11 @@
 
         <!-- Product 4 -->
         <div class="product-card">
-          <div class="product-image"><div class="contenedor-producto">
-              <img
-                src="image\Miel.jpeg"
-                alt="Logo"
-                width="100"
-                height="100"
-              />
-            </div></div>
+          <div class="product-image">
+            <div class="contenedor-producto">
+              <img src="image\Miel.jpeg" alt="Logo" width="100" height="100" />
+            </div>
+          </div>
           <div class="product-content">
             <h3>Miel de Abejas Pura</h3>
             <p class="subtitle">Esencia multifloral de alta montaña</p>
@@ -571,14 +584,11 @@
 
         <!-- Product 5 -->
         <div class="product-card">
-          <div class="product-image"><div class="contenedor-producto">
-              <img
-                src="image\Polen.jpeg"
-                alt="Logo"
-                width="100"
-                height="100"
-              />
-            </div></div>
+          <div class="product-image">
+            <div class="contenedor-producto">
+              <img src="image\Polen.jpeg" alt="Logo" width="100" height="100" />
+            </div>
+          </div>
           <div class="product-content">
             <h3>Polen</h3>
             <p class="subtitle">Energía que nace de la flor</p>
